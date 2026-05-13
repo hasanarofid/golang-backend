@@ -2,8 +2,7 @@ package repository
 
 import (
 	"database/sql"
-
-	"github.com/hasanarofid/golang-backend/internal/model"
+	"golang-backend/internal/model"
 )
 
 type UserRepository struct {

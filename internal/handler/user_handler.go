@@ -4,8 +4,8 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/hasanarofid/golang-backend/internal/model"
-	"github.com/hasanarofid/golang-backend/internal/service"
+	"golang-backend/internal/model"
+	"golang-backend/internal/service"
 )
 
 type UserHandler struct {

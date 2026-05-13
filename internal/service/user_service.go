@@ -2,9 +2,8 @@ package service
 
 import (
 	"errors"
-
-	"github.com/hasanarofid/golang-backend/internal/model"
-	"github.com/hasanarofid/golang-backend/internal/repository"
+	"golang-backend/internal/model"
+	"golang-backend/internal/repository"
 
 	"golang.org/x/crypto/bcrypt"
 )

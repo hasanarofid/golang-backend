@@ -4,10 +4,10 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/hasanarofid/golang-backend/internal/config"
-	"github.com/hasanarofid/golang-backend/internal/handler"
-	"github.com/hasanarofid/golang-backend/internal/repository"
-	"github.com/hasanarofid/golang-backend/internal/service"
+	"golang-backend/internal/config"
+	"golang-backend/internal/handler"
+	"golang-backend/internal/repository"
+	"golang-backend/internal/service"
 )
 
 func main() {
@@ -16,6 +16,9 @@ func main() {
 	userRepo := &repository.UserRepository{DB: db}
 	userService := &service.UserService{Repo: userRepo}
 	userHandler := &handler.UserHandler{Service: userService}
+	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+		w.Write([]byte("API is running 🚀"))
+	})
 
 	http.HandleFunc("/register", userHandler.Register)
 	http.HandleFunc("/login", userHandler.Login)
